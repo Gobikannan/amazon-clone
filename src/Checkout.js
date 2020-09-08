@@ -3,6 +3,8 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 import BasketItem from "./BasketItem";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import { Link } from "react-router-dom";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
@@ -17,6 +19,12 @@ function Checkout() {
         <div className="checkout__title">
           <h2>Your Shopping Basket</h2>
         </div>
+        {basket.length === 0 && (
+          <div className="checkout__noItems">
+            <SentimentVeryDissatisfiedIcon />
+            <span>No items added to basket</span>
+          </div>
+        )}
         {basket.map((value, i) => (
           <BasketItem {...value} />
         ))}
