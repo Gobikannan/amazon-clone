@@ -1,0 +1,36 @@
+.basketitem {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.basketitem__info {
+  padding-left: 20px;
+}
+
+.basketitem__title {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.basketitem__rating {
+  display: flex;
+}
+
+.basketitem__ratingIcon {
+  color: orange;
+}
+
+.basketitem__image {
+  object-fit: contain;
+  height: 180px;
+  width: 180px;
+}
+
+.basketitem__removeFromBasket {
+  background: #f0c14b;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
