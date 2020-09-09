@@ -1,33 +1,33 @@
-.basketitem {
+.checkoutproduct {
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.basketitem__info {
+.checkoutproduct__info {
   padding-left: 20px;
 }
 
-.basketitem__title {
+.checkoutproduct__title {
   font-size: 17px;
   font-weight: 800;
 }
 
-.basketitem__rating {
+.checkoutproduct__rating {
   display: flex;
 }
 
-.basketitem__ratingIcon {
+.checkoutproduct__ratingIcon {
   color: orange;
 }
 
-.basketitem__image {
+.checkoutproduct__image {
   object-fit: contain;
   height: 180px;
   width: 180px;
 }
 
-.basketitem__removeFromBasket {
+.checkoutproduct__removeFromBasket {
   background: #f0c14b;
   border: 1px solid;
   margin-top: 10px;

@@ -5,7 +5,7 @@ import { useStateValue } from "./StateProvider";
 import { v4 as uuidv4 } from "uuid";
 
 function Product({ title, image, price, rating }) {
-  const [state, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     // dispatch the item into data layer
@@ -31,8 +31,8 @@ function Product({ title, image, price, rating }) {
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map((_, i) => (
-              <GradeIcon className="product__ratingIcon" />
+            .map((_, index) => (
+              <GradeIcon key={index} className="product__ratingIcon" />
             ))}
         </div>
       </div>
