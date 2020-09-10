@@ -47,22 +47,11 @@
 }
 
 .login__signInButton {
-  background: #f0c14b;
-  border: 1px solid;
   margin-top: 10px;
-  height: 30px;
   width: 100%;
-  border-radius: 2px;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: #111;
 }
 
 .login__registerButton {
-  border: 1px solid;
   margin-top: 10px;
-  border-color: darkgray;
-  color: #111;
-  height: 30px;
-  border-radius: 2px;
   width: 100%;
 }

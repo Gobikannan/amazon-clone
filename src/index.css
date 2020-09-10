@@ -16,3 +16,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.app_primary_button {
+  background: #f0c14b;
+  border: 1px solid;
+  height: 30px;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  cursor: pointer;
+}
+
+.app_primary_button:hover {
+  background: #c99616;
+}
+
+.app_secondary_button {
+  background: #d4d4d4;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: darkgray;
+  color: #111;
+  height: 30px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.app_secondary_button:hover {
+  background: #979696;
+}

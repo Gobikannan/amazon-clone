@@ -37,7 +37,10 @@ function Product({ title, image, price, rating }) {
         </div>
       </div>
       <img alt="prod banner" className="product__image" src={image} />
-      <button className="product__addtobasket" onClick={addToBasket}>
+      <button
+        className="product__addtobasket app_primary_button"
+        onClick={addToBasket}
+      >
         Add to Basket
       </button>
     </div>

@@ -54,7 +54,7 @@ function Login() {
           <button
             type="submit"
             onClick={signIn}
-            className="login__signInButton"
+            className="login__signInButton app_primary_button"
           >
             {!loading && "Sign In"}
             {loading && <Loader type="ThreeDots" color="#000" height={25} />}
@@ -65,7 +65,10 @@ function Login() {
           Sale. Please see our Privacy Notice, our Cookies Notice and our
           Interest-Based Ads Notice.
         </p>
-        <button className="login__registerButton" onClick={register}>
+        <button
+          className="login__registerButton app_secondary_button"
+          onClick={register}
+        >
           Create your Amazon Account
         </button>
       </div>
