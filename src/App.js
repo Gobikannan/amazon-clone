@@ -5,6 +5,7 @@ import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from "./Checkout";
 import Login from "./Login";
+import RegisterAccount from "./RegisterAccount";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 
@@ -14,7 +15,6 @@ function App() {
   useEffect(() => {
     // check user login
     auth.onAuthStateChanged((authUser) => {
-      console.log(authUser);
       dispatch({
         type: "SET_USER",
         user: authUser,
@@ -28,6 +28,9 @@ function App() {
         <Switch>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/register">
+            <RegisterAccount />
           </Route>
           <Route path="/checkout">
             <Header />

@@ -2,34 +2,29 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Login.css";
 import { auth } from "./firebase";
+import Loader from "react-loader-spinner";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true);
     auth
       .signInWithEmailAndPassword(email, password)
       .then((authResp) => {
         // if successfully created a new user
         history.push("/");
       })
-      .catch((error) => alert(error.message));
+      .catch((error) => alert(error.message))
+      .finally(() => setLoading(false));
   };
 
   const register = (e) => {
     e.preventDefault();
-    // create account in firebase
-    auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((authResp) => {
-        // if successfully created a new user
-        if (authResp) {
-          history.push("/");
-        }
-      })
-      .catch((error) => alert(error.message));
+    history.push("/register");
   };
 
   return (
@@ -61,7 +56,8 @@ function Login() {
             onClick={signIn}
             className="login__signInButton"
           >
-            Sign In
+            {!loading && "Sign In"}
+            {loading && <Loader type="ThreeDots" color="#000" height={25} />}
           </button>
         </form>
         <p>

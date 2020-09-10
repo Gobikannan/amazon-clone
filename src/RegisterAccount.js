@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./RegisterAccount.css";
-import { auth } from "./firebase";
+import { auth, db } from "./firebase";
 import Loader from "react-loader-spinner";
 
 function RegisterAccount() {
@@ -16,7 +16,6 @@ function RegisterAccount() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((authResp) => {
-        // if successfully created a new user
         history.push("/");
       })
       .catch((error) => {
